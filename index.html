@@ -177,6 +177,13 @@ $('.buttons123').click(output);
 var spacepressed = false;
 
 $(document).keypress(function(e){
+	var whitepitch = [5.3,6,6.7,7,8,9,9.5,10.5,12,13.2,14,16,18,19];
+	var blackpitch = [0,5.6,6.3,777,7.5,8.5,777,10,11,12.5,777,15,17,777,20];
+	whitepitch = whitepitch.concat(blackpitch).sort(function(a, b){return a-b;});
+	while(whitepitch[whitepitch.length-1] > 20) whitepitch.pop();
+	var pitch = $('#pitch').val()/1;
+	var pitchIndex = whitepitch.indexOf(pitch);
+
 	var key = String.fromCharCode(e.which).toUpperCase();
 	if(spacepressed==true){
 		if(key == 'Q'){
@@ -190,9 +197,11 @@ $(document).keypress(function(e){
 			$('#volume').val(($('#volume').val()/1-1).toFixed(0))
 		}
 		if(key == "R"){
-			$('#pitch').val(($('#pitch').val()/1+1).toFixed(0))
+			if(pitchIndex < whitepitch.length - 1) pitchIndex++;
+			$('#pitch').val(whitepitch[pitchIndex]);
 		}else if(key == "F"){
-			$('#pitch').val(($('#pitch').val()/1-1).toFixed(0))
+			if(pitchIndex > 0) pitchIndex--;
+			$('#pitch').val(whitepitch[pitchIndex]);
 		}
 		if(key == "T"){
 			$('#delay').val(($('#delay').val()/1+1).toFixed(0))
