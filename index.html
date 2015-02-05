@@ -171,7 +171,7 @@ function output(xpot){
 	 beforetext+=$('#delay').val()/1
 	
 	$('.textstyle').val(beforetext+',')
-	$('#delay').val($('#delay').val()/1+$('#delayplus').val()/1)
+	$('#delay').val(($('#delay').val()/1+$('#delayplus').val()/1).toFixed(0))
 }
 $('.buttons123').click(output);
 var spacepressed = false;
@@ -186,6 +186,7 @@ $(document).keypress(function(e){
 
 	var key = String.fromCharCode(e.which).toUpperCase();
 	if(spacepressed==true){
+	document.body.style.cursor = "help";
 		if(key == 'Q'){
 			output()
 		}else if(key == "A"){
@@ -217,7 +218,8 @@ $(document).keyup(function(e){
 	var key = String.fromCharCode(e.which).toUpperCase();
 	if(key == "W"){
 		spacepressed=false;
-	}
+		document.body.style.cursor = "default";
+  }
 });
 
 $('.buttons456').click(function(xpot){
