@@ -11,10 +11,10 @@ window.onload = function () {
       buttons[i].moveTo(17+40*(i),140);
     	buttons[i].i=i;
     	game.rootScene.addChild(buttons[i]);
-    	console.log(whitepitch[i]);
+    	//console.log(whitepitch[i]);
     	buttons[i].ontouchstart = function(){
      		$('#pitch').val(whitepitch[this.i]);
-    		console.log(whitepitch[this.i]);
+    		//console.log(whitepitch[this.i]);
     	}
     }
     var blackpitch = [0,5.6,6.3,777,7.5,8.5,777,10,11,12.5,777,15,17,777,20];
@@ -26,10 +26,10 @@ window.onload = function () {
       if(k==3||k==6||k==10||k==13){
       }else{
       game.rootScene.addChild(buttones[k]);
-      console.log(blackpitch[k]);
+      //console.log(blackpitch[k]);
       buttones[k].ontouchstart = function(){
         $('#pitch').val(blackpitch[this.k]);
-        console.log(blackpitch[this.k]);
+        //console.log(blackpitch[this.k]);
       }
    }
  }

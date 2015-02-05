@@ -3,9 +3,9 @@
 <title>
 sounds beta0.8
 </title>
-    <script type="text/javascript" src="lib/enchant.js"></script>
-    <script type="text/javascript" src="lib/ui.enchant.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="lib/enchant.js"></script>
+		<script type="text/javascript" src="lib/ui.enchant.js"></script>
+		<script type="text/javascript" src="main.js"></script>
  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -114,9 +114,9 @@ sounds beta0.8
 				<div class="form-group">
 					<input type="number" id="delayplus" placeholder="delay plussing">
 				</div>
-				  <button type="button" class="btn btn-Primary buttons123">output_button</button>
-				  
-				  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">How_To_Use</button>
+					<button type="button" class="btn btn-Primary buttons123">output_button</button>
+					
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">How_To_Use</button>
 				<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
@@ -150,10 +150,10 @@ sounds beta0.8
 		<div class="col-md-4">
 			sounds_source
 				<textarea class="form-control textstyle" rows="3"></textarea>
-			    <button type="button" class="btn btn-danger buttons456">delete_button</button>
+					<button type="button" class="btn btn-danger buttons456">delete_button</button>
 		</div>
 	</div>
-  
+	
 </body>
 <script>
 function output(xpot){
@@ -209,15 +209,15 @@ $(document).keypress(function(e){
 			$('#delay').val(($('#delay').val()/1-1).toFixed(0))
 		}
 	}
-  if(e.which ==119||e.which ==87){
+	if(e.which ==119||e.which ==87){
 	spacepressed=true;
-  }
+	}
 });
 $(document).keyup(function(e){
 	var key = String.fromCharCode(e.which).toUpperCase();
-  if(key == "W"){
+	if(key == "W"){
 		spacepressed=false;
-  }
+	}
 });
 
 $('.buttons456').click(function(xpot){
